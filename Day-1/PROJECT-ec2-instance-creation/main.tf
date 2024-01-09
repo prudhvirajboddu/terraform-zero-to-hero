@@ -3,6 +3,8 @@ provider "aws" {
 }
 
 resource "aws_instance" "example" {
-    ami           = "ami-0c55b159cbfafe1f0"  # Specify an appropriate AMI ID
+    ami           = "ami-06aa3f7caf3a30282"  # Specify an appropriate AMI ID
+    subnet_id = "subnet-0c8d0d14e44a4838f" #have to define subnet id and Key pair name to create instance with a specific subnet and key pair
+    key_name = "sgpu"
     instance_type = "t2.micro"
 }
